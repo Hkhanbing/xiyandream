@@ -1,6 +1,6 @@
 Applying: 
   Clean:     libraries\net\minecraft\server\1.20.1-20230612.114412\server-1.20.1-20230612.114412-srg.jar
-  Output:    C:\Users\hkbin\Desktop\workdir\MC\libraries\net\minecraftforge\forge\1.20.1-47.3.1\forge-1.20.1-47.3.1-server.jar
+  Output:    C:\Users\hkbin\Desktop\workdir\xiyandream\libraries\net\minecraftforge\forge\1.20.1-47.3.1\forge-1.20.1-47.3.1-server.jar
   KeepData:  false
   Unpatched: false
   Pack200:   false
@@ -954,6 +954,8 @@ Loading patches file: libraries\com\mohistmc\installation\data\server.lzma
     Checksum: 547a1511 Exists: true
   Reading patch net.minecraft.core.RegistrySynchronization.binpatch
     Checksum: d1358be4 Exists: true
+  Reading patch net.minecraft.core.UUIDUtil.binpatch
+    Checksum: b44adf72 Exists: true
   Reading patch net.minecraft.core.cauldron.CauldronInteraction.binpatch
     Checksum: 3ddf68c2 Exists: true
   Reading patch net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior.binpatch
@@ -1522,8 +1524,6 @@ Loading patches file: libraries\com\mohistmc\installation\data\server.lzma
     Checksum: 0 Exists: false
   Reading patch net.minecraft.server.network.ServerGamePacketListenerImpl$4.binpatch
     Checksum: 0 Exists: false
-  Reading patch net.minecraft.server.network.ServerGamePacketListenerImpl$5.binpatch
-    Checksum: 0 Exists: false
   Reading patch net.minecraft.server.network.ServerGamePacketListenerImpl$EntityInteraction.binpatch
     Checksum: f94ec06a Exists: true
   Reading patch net.minecraft.server.network.ServerGamePacketListenerImpl.binpatch
@@ -1534,10 +1534,6 @@ Loading patches file: libraries\com\mohistmc\installation\data\server.lzma
     Checksum: e8c36a07 Exists: true
   Reading patch net.minecraft.server.network.ServerLoginPacketListenerImpl$1.binpatch
     Checksum: 2d96a957 Exists: true
-  Reading patch net.minecraft.server.network.ServerLoginPacketListenerImpl$LoginHandler$1.binpatch
-    Checksum: 0 Exists: false
-  Reading patch net.minecraft.server.network.ServerLoginPacketListenerImpl$LoginHandler.binpatch
-    Checksum: 0 Exists: false
   Reading patch net.minecraft.server.network.ServerLoginPacketListenerImpl$State.binpatch
     Checksum: d1ddd19b Exists: true
   Reading patch net.minecraft.server.network.ServerLoginPacketListenerImpl.binpatch
@@ -4034,6 +4030,7 @@ Processing: libraries\net\minecraft\server\1.20.1-20230612.114412\server-1.20.1-
   Patching net/minecraft/core/RegistrySetBuilder 1/1
   Patching net/minecraft/core/RegistrySynchronization$NetworkedRegistryData 1/1
   Patching net/minecraft/core/RegistrySynchronization 1/1
+  Patching net/minecraft/core/UUIDUtil 1/1
   Patching net/minecraft/core/cauldron/CauldronInteraction 1/1
   Patching net/minecraft/core/dispenser/AbstractProjectileDispenseBehavior 1/1
   Patching net/minecraft/core/dispenser/BoatDispenseItemBehavior 1/1
@@ -5507,7 +5504,6 @@ Processing: libraries\net\minecraft\server\1.20.1-20230612.114412\server-1.20.1-
   Patching net/minecraft/world/item/crafting/RecipeType$2 1/1
   Patching net/minecraft/server/network/ServerGamePacketListenerImpl$3 1/1
   Patching net/minecraft/server/network/ServerGamePacketListenerImpl$4 1/1
-  Patching net/minecraft/server/network/ServerGamePacketListenerImpl$5 1/1
   Patching net/minecraft/client/sounds/SoundEngine$DeviceCheckState 1/1
   Patching net/minecraft/client/renderer/texture/Stitcher$SpriteLoader 1/1
   Patching com/mojang/blaze3d/platform/GlStateManager$PolygonOffsetState 1/1
@@ -5577,7 +5573,6 @@ Processing: libraries\net\minecraft\server\1.20.1-20230612.114412\server-1.20.1-
   Patching net/minecraft/client/particle/FireworkParticles$FlashProvider 1/1
   Patching net/minecraft/client/renderer/block/model/ItemTransforms$Deserializer 1/1
   Patching net/minecraft/client/renderer/ShaderInstance$1 1/1
-  Patching net/minecraft/server/network/ServerLoginPacketListenerImpl$LoginHandler 1/1
   Patching net/minecraft/client/renderer/blockentity/BlockEntityRenderers 1/1
   Patching net/minecraft/client/resources/model/SimpleBakedModel$Builder 1/1
   Patching net/minecraft/client/renderer/culling/Frustum 1/1
@@ -5830,7 +5825,6 @@ Processing: libraries\net\minecraft\server\1.20.1-20230612.114412\server-1.20.1-
   Patching net/minecraft/client/gui/Gui$HeartType 1/1
   Patching net/minecraft/client/gui/screens/Screen 1/1
   Patching net/minecraft/client/gui/screens/inventory/HangingSignEditScreen 1/1
-  Patching net/minecraft/server/network/ServerLoginPacketListenerImpl$LoginHandler$1 1/1
   Patching com/mojang/realmsclient/gui/screens/RealmsNotificationsScreen$3 1/1
   Patching com/mojang/realmsclient/gui/screens/RealmsNotificationsScreen$1 1/1
   Patching com/mojang/realmsclient/gui/screens/RealmsNotificationsScreen$2 1/1
@@ -5877,3 +5871,8 @@ Processing: libraries\net\minecraft\server\1.20.1-20230612.114412\server-1.20.1-
   Patching net/minecraft/client/renderer/block/model/BakedQuad 1/1
   Patching net/minecraft/client/particle/ReversePortalParticle$ReversePortalProvider 1/1
   Patching net/minecraft/client/gui/screens/packs/PackSelectionModel$EntryBase 1/1
+  Patching net/minecraft/client/gui/screens/worldselection/WorldCreationUiState$WorldTypeEntry 1/1
+  Patching net/minecraft/client/renderer/block/model/ItemOverrides$PropertyMatcher 1/1
+  Patching net/minecraft/client/particle/EnchantmentTableParticle$Provider 1/1
+  Patching net/minecraft/client/gui/GuiGraphics 1/1
+  Patching net/minecraft/client/renderer/block/model/BlockModel$GuiLight 1/1
